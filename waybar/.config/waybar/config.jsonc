@@ -32,9 +32,12 @@
     }
   },
   "custom/weather": {
-    "format": "WEATHER",
-    "tooltip": true,
-    "interval": 3600
+    "format": "{}",
+    "tooltip": false,
+    "interval": 3600,
+    "escape": true,
+    "exec": "~/.config/waybar/scripts/weather.sh",
+    "return-type": "json"
   },
   "hyprland/workspaces": {
     "format": "{icon}",
