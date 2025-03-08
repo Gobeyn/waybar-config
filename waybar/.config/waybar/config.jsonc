@@ -75,8 +75,8 @@
     "tooltip-format": "{position}/{length}"
   },
   "network": {
-    "format-wifi": " ({essid})",
-    "format-ethernet": " ({essid})",
+    "format-wifi": "  ({essid})",
+    "format-ethernet": "  ({essid})",
     "format-disconnected": "",
     "tooltip": true,
     "tooltip-format": "{eesid} ({signalStrength}) | {ipaddr}",
@@ -91,7 +91,7 @@
     "tooltip": false
   },
   "disk": {
-    "format": " ({used})",
+    "format": "  {used}",
     "unit": "GiB",
     "path": "/home",
     "interval": 30,
