@@ -322,8 +322,20 @@ def get_tooltip(
 
 
 if __name__ == "__main__":
-    assert len(sys.argv) == 2, "Usage <PROGRAM> <LOCATION>"
-    location: str = sys.argv[1]
+    try:
+        # Get city name via IP information
+        ip_response: requests.Response = requests.get("https://ipinfo.io/json")
+        ip_content: dict = ip_response.json()
+        location: str = ip_content["city"].lower()
+    except Exception as e:
+        print(
+            json.dumps(
+                return_on_error(
+                    err_msg=f"Request did not yield weather information: {e}"
+                )
+            )
+        )
+        exit()
 
     try:
         # Get weather information

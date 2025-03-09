@@ -36,8 +36,7 @@
     "tooltip": true,
     "interval": 3600,
     "escape": true,
-    //"exec": "~/.config/waybar/scripts/weather.sh",
-    "exec": "~/.config/waybar/scripts/weather.py darmstadt",
+    "exec": "~/.config/waybar/scripts/weather.py",
     "return-type": "json"
   },
   "hyprland/workspaces": {
