@@ -33,10 +33,11 @@
   },
   "custom/weather": {
     "format": "{}",
-    "tooltip": false,
+    "tooltip": true,
     "interval": 3600,
     "escape": true,
-    "exec": "~/.config/waybar/scripts/weather.sh",
+    //"exec": "~/.config/waybar/scripts/weather.sh",
+    "exec": "~/.config/waybar/scripts/weather.py darmstadt",
     "return-type": "json"
   },
   "hyprland/workspaces": {
@@ -85,7 +86,7 @@
   "temperature": {
     "format": "{temperatureC}°C {icon}",
     "format-critical": "{temperatureC}°C  ",
-    "interval": 1,
+    "interval": 60,
     "critical-threshold": 80,
     "format-icons": ["", "", "", "", ""],
     "tooltip": false
@@ -94,7 +95,7 @@
     "format": "  {used}",
     "unit": "GiB",
     "path": "/home",
-    "interval": 30,
+    "interval": 900,
     "tooltip": true,
     "tooltip-format": "{used} used out of {total} on {path} ({percentage_used}%)"
   },
@@ -127,7 +128,7 @@
     "escape": true,
     "return-type": "json",
     "exec": "~/.config/waybar/scripts/count_updates.sh",
-    "restart-interval": 60
+    "restart-interval": 300
   },
   "custom/logout": {
     "format": "󰴈 ",
