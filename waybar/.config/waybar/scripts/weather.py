@@ -189,7 +189,9 @@ def extract_forcast_day(weather_content: dict, day: int) -> list[dict]:
     weather_content_day: dict = weather_content["weather"][day]
     for hour_data in weather_content_day["hourly"]:
         forcast: dict = {}
-        if int(format_time(hour_data["time"])) < datetime.now().hour - 2:
+        if (int(format_time(hour_data["time"])) < datetime.now().hour - 2) and (
+            day == 0
+        ):
             continue
         forcast["time"] = f"{format_time(hour_data["time"])}" + ":00"
         forcast["code"] = hour_data["weatherCode"]
@@ -310,11 +312,11 @@ def get_tooltip(
         else:
             continue
 
-        for lines_hourforecast in lines_dayforecast:
+        for idx, lines_hourforecast in enumerate(lines_dayforecast):
             for line in lines_hourforecast:
                 lines.append(line)
-            lines.append(hour_separator_line(text=all_lines))
-            # lines.append("")
+            if idx < len(lines_dayforecast) - 1:
+                lines.append(hour_separator_line(text=all_lines))
 
     return "\n".join(lines)
 
