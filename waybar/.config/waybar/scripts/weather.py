@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 import requests
-import sys
 import json
 from datetime import datetime
 
@@ -262,7 +261,7 @@ def get_tooltip(
 
     lines_today: list[str] = []
     lines_today.append(f"{country}, {city} ({provence}) —   {int(population):,}")
-    lines_today.append(f"Polled at — {time}")
+    lines_today.append(f"Polled at {time}")
     lines_today.append(f"{weather_emoji} — {temp}°C")
     lines_today.append(f"💧 — {rain} mm")
     lines_today.append(f"🍃 — {wind} kph")
@@ -287,7 +286,7 @@ def get_tooltip(
             chances = hour_forecast["chance"]
 
             lines_hourforecast.append(
-                f" — {forecast_time} | {weather_emoji} — {temp}°C"
+                f"  — {forecast_time} | {weather_emoji} — {temp}°C"
             )
             lines_hourforecast.append(
                 f"🌁 — {chances["fog"]} | ❄️ — {chances["frost"]} | ☁️ — {chances["overcast"]} | 🌧️ — {chances["rain"]}"
