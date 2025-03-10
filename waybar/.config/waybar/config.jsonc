@@ -76,10 +76,11 @@
   },
   "network": {
     "format-wifi": "  ({essid})",
-    "format-ethernet": "  ({essid})",
+    "format-ethernet": "  ({ifname})",
     "format-disconnected": "",
     "tooltip": true,
-    "tooltip-format": "{eesid} ({signalStrength}) | {ipaddr}",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%) | {ipaddr}",
+    "tooltip-format-ethernet": "{ifname} | {ipaddr}",
     "max-length": 50
   },
   "temperature": {

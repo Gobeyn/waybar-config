@@ -7,7 +7,8 @@ This repository contains my [waybar](https://github.com/kovidgoyal/kitty) config
 For the configuration to function as intended, the [DaddyTimeMono Nerd font](https://www.nerdfonts.com/font-downloads)
 should be installed alongside [Noto Serif CJK](https://github.com/notofonts/noto-cjk) 
 for rendering Japanese characters and [Noto Emoji](https://github.com/googlefonts/noto-emoji) 
-for rendering the weather information.
+for rendering the weather information. For the weather requests the `python` library `requests` is used, which needs 
+to be installed (for `pacman` it is called `python-requests`).
 
 ## Install
 

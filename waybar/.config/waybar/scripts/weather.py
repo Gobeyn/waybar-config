@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 
-import requests
 import json
 from datetime import datetime
+
+import requests
 
 
 def map_weather_code_to_condition() -> dict:
