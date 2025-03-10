@@ -118,7 +118,7 @@
     "tooltip": false
   },
   "backlight": {
-    "format": "{icon} {percent}%",
+    "format": "{icon}{percent}%",
     "tooltip": false,
     "format-icons": ["󰃚 ","󰃛 ", "󰃜 ", "󰃝 ", "󰃞 ", "󰃟 ", "󰃠 "]
   },
