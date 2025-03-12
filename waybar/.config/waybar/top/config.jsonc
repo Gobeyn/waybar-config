@@ -36,7 +36,7 @@
     "tooltip": true,
     "interval": 3600,
     "escape": true,
-    "exec": "~/.config/waybar/scripts/weather.py",
+    "exec": "~/.config/waybar/top/scripts/weather.py",
     "return-type": "json"
   },
   "hyprland/workspaces": {
@@ -127,7 +127,7 @@
     "tooltip": false,
     "escape": true,
     "return-type": "json",
-    "exec": "~/.config/waybar/scripts/count_updates.sh",
+    "exec": "~/.config/waybar/top/scripts/count_updates.sh",
     "restart-interval": 300
   },
   "custom/logout": {
