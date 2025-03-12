@@ -10,6 +10,7 @@
 
 #taskbar {
   background: @overlay;
+  opacity: 0.75;
   border-radius: 12px 12px 12px 12px;
 }
 
